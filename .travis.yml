@@ -3,12 +3,15 @@ dist: trusty
 
 install:
   - pip install codecov
+  - pip install -U Sphinx
   - pip install tox
 
 jobs:
   include:
     - stage: build
-      script: tox -e docs --sdistonly
+      script: tox --notest --sdistonly
+    - python: "3.7"
+      script: sphinx-build -d "doc/docs_doctree" doc "doc/docs_out" --color -W -bhtml
 
 
 #    - stage: "Tests"
