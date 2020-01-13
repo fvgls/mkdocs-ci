@@ -9,7 +9,6 @@ jobs:
   include:
     - stage: build
       script: 
-        git clean -f -d -x
         tox --notest --sdist-only”
 
 
