@@ -1,0 +1,21 @@
+language: python
+dist: trusty
+
+install:
+  - pip install codecov
+  - pip install tox
+
+jobs:
+  include:
+    - stage: build
+      script: tox
+
+#    - stage: "Tests"
+#      name: "Test 1"
+#      script: tox --parallel all
+#    - stage: deploy
+#      deploy:
+#        provider: pypi
+
+
+
