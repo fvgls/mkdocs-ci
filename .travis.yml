@@ -1,30 +1,33 @@
 language: python
 dist: trusty
-python:
-  - "3.5"
-  - "3.6"      # current default Python on Travis CI
-  - "3.7"
-  - "3.8"
+
 
 install:
   - pip install codecov
-#  - pip install mkdocs
-  - pip install tox
         
 jobs:
   include:
     - stage: build
       name: "Build"
-
+      install: pip install tox
       script: tox --notest --sdistonly
 #    - name: "Generating documentation"
+#      install: pip install mkdocs
 #      script: mkdocs build --clean
 
 
     - stage: "Tests"  
       name: "Test py35"
+      python: "3.5"
+      install:
+        - pip install codecov
+        - pip install tox
       script: tox -e py35
     - name: "Test py36"
+      python: "3.6"
+      install:
+        - pip install codecov
+        - pip install tox
       script: tox -e py36
     
     
