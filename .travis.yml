@@ -9,8 +9,9 @@ install:
 jobs:
   include:
     - stage: build
+      name: "Build"
       script: tox --notest --sdistonly
-    - python: "3.7"
+    - name: "Generating documentation"
       script: sphinx-build -d "doc/docs_doctree" doc "doc/docs_out" --color -W -bhtml
 
 
