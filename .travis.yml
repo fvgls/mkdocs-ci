@@ -3,7 +3,7 @@ dist: trusty
 
 install:
   - pip install codecov
-  - pip install mkdocs
+#  - pip install mkdocs
   - pip install tox
 
 jobs:
@@ -11,13 +11,11 @@ jobs:
     - stage: build
       name: "Build"
       script: tox --notest --sdistonly
-    - name: "Generating documentation"
-      script: mkdocs build --clean
+#    - name: "Generating documentation"
+#      script: mkdocs build --clean
 
-
-#    - stage: "Tests"
-#      name: "Test 1"
-#      script: tox --parallel all
+    - stage: "Tests"
+      script: tox --parallel all
 #    - stage: deploy
 #      deploy:
 #        provider: pypi
