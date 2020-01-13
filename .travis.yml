@@ -1,15 +1,14 @@
 language: python
 dist: trusty
 
-install:
-  - pip install codecov
-#  - pip install mkdocs
-  - pip install tox
-
 jobs:
   include:
     - stage: build
       name: "Build"
+      install:
+        - pip install codecov
+      #  - pip install mkdocs
+        - pip install tox
       script: tox --notest --sdistonly
 #    - name: "Generating documentation"
 #      script: mkdocs build --clean
@@ -72,6 +71,11 @@ jobs:
       env: TOXENV=pypy3-min-req
     - python: 'pypy3'
       env: TOXENV=pypy3-unittests
+      
+    - install:
+      - pip install codecov
+    #  - pip install mkdocs
+      - pip install tox
       
     - script: tox --parallel all
     
