@@ -3,7 +3,7 @@ dist: trusty
 
 install:
   - pip install codecov
-  - pip install -U Sphinx
+  - pip install mkdocs
   - pip install tox
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       name: "Build"
       script: tox --notest --sdistonly
     - name: "Generating documentation"
-      script: sphinx-build -d "doc/docs_doctree" doc "doc/docs_out" --color -W -bhtml
+      script: mkdocs build --clean
 
 
 #    - stage: "Tests"
