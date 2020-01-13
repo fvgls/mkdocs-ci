@@ -67,7 +67,10 @@ install:
 jobs:
   include:
     - stage: build
-      script: tox
+      script: 
+        tox
+        git clean -f -d -x
+
 
 #    - stage: "Tests"
 #      name: "Test 1"
