@@ -9,7 +9,7 @@ jobs:
   include:
     - stage: build
       script: 
-        tox --notest --sdistonly
+        tox --notest --sdistonly -e docs
 
 
 #    - stage: "Tests"
