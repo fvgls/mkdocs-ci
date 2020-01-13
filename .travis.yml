@@ -8,8 +8,7 @@ install:
 jobs:
   include:
     - stage: build
-      script: 
-        tox --notest --sdistonly -e docs
+      script: tox -e docs --sdistonly
 
 
 #    - stage: "Tests"
