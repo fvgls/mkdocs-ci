@@ -9,7 +9,7 @@ jobs:
   include:
     - stage: build
       script: 
-        tox --notest --sdist-only”
+        tox --notest --sdist-only
 
 
 #    - stage: "Tests"
