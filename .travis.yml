@@ -23,14 +23,14 @@ jobs:
       install:
         - pip install codecov
         - pip install tox
-      script: tox
+      script: tox --result-json
     - name: "Test py36"
       python: "3.6"
       env: TOXENV=py36tests
       install:
         - pip install codecov
         - pip install tox
-      script: tox
+      script: tox --result-json
     
     
 #    - stage: deploy
