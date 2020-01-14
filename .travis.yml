@@ -7,7 +7,7 @@ install:
 jobs:
   include:
     - stage: build
-      name: "Build + docs"
+      name: "Build"
       python: '3.6'
       install: pip install tox
       script: tox --notest --sdistonly
@@ -17,6 +17,7 @@ jobs:
         - pip install mkdocs
         - pip install mkdocs-material
         - pip install pymdown-extensions
+        - pip install markdown
       script: 
         - mkdocs --version
         - mkdocs build --clean
