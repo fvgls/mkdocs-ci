@@ -15,7 +15,7 @@ jobs:
       python: '3.6'
       install: pip install pdoc
       script: 
-        - pdoc --html ./mkdocs
+        - pdoc --html ./doc
 
 
     - stage: "Tests"  
