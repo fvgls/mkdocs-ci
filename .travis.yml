@@ -13,7 +13,10 @@ jobs:
       script: tox --notest --sdistonly
     - name: "Generating documentation"
       python: '3.6'
-      install: pip install mkdocs
+      install: 
+        - pip install mkdocs
+        - pip install mkdocs-material
+        - pip install pymdown-extensions
       script: 
         - mkdocs --version
         - mkdocs build --clean
