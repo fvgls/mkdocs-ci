@@ -1,7 +1,6 @@
 language: python
 dist: trusty
 
-
 install:
   - pip install codecov
         
