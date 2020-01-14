@@ -16,6 +16,7 @@ jobs:
       install: pip install pycco
       script: 
         - pycco mkdocs/**/*.py -p
+        - ls docs/mkdocs
 
 
     - stage: "Tests"  
