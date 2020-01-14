@@ -17,9 +17,23 @@ jobs:
 
 
     - stage: "Tests"  
-      name: "Test py35"
-      python: "3.5"
-      env: TOXENV=py35
+      name: "Test py35-integration"
+      python: '3.5'
+      env: TOXENV=py35-integration
+      install:
+        - pip install codecov
+        - pip install tox
+      script: tox
+    - name: "Test py35-min-req"
+      python: '3.5'
+      env: TOXENV=py35-min-req
+      install:
+        - pip install codecov
+        - pip install tox
+      script: tox
+    - name: "Test py35-unittests"
+      python: '3.5'
+      env: TOXENV=py35-unittests
       install:
         - pip install codecov
         - pip install tox
