@@ -11,9 +11,9 @@ jobs:
       name: "Build"
       install: pip install tox
       script: tox --notest --sdistonly
-#    - name: "Generating documentation"
-#      install: pip install mkdocs
-#      script: mkdocs build --clean
+    - name: "Generating documentation"
+      install: pip install mkdocs
+      script: mkdocs build --clean
 
 
     - stage: "Tests"  
