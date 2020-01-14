@@ -9,35 +9,37 @@ jobs:
   include:
     - stage: build
       name: "Build"
+      env: TOXENV=docs
       install: pip install tox
       script: tox --notest --sdistonly
-    - name: "Generating documentation"
-      install: pip install mkdocs
-      script: mkdocs build --clean
+#    - name: "Generating documentation"
+#      install: pip install mkdocs
+#     script: mkdocs build --clean
 
 
     - stage: "Tests"  
-      name: "Test py35-integration"
+ #     name: "Test py35-integration"
+      name "Test py35"
       python: '3.5'
-      env: TOXENV=py35-integration
+      env: TOXENV=py35
       install:
         - pip install codecov
         - pip install tox
       script: tox
-    - name: "Test py35-min-req"
-      python: '3.5'
-      env: TOXENV=py35-min-req
-      install:
-        - pip install codecov
-        - pip install tox
-      script: tox
-    - name: "Test py35-unittests"
-      python: '3.5'
-      env: TOXENV=py35-unittests
-      install:
-        - pip install codecov
-        - pip install tox
-      script: tox 
+#    - name: "Test py35-min-req"
+#      python: '3.5'
+#      env: TOXENV=py35-min-req
+#      install:
+#        - pip install codecov
+#        - pip install tox
+#      script: tox
+#    - name: "Test py35-unittests"
+#      python: '3.5'
+#      env: TOXENV=py35-unittests
+#      install:
+#        - pip install codecov
+#        - pip install tox
+#      script: tox 
     - name: "Test py36"
       python: "3.6"
       env: TOXENV=py36
