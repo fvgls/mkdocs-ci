@@ -13,18 +13,11 @@ jobs:
       script: tox --notest --sdistonly
     - name: "Generating documentation"
       python: '3.6'
-      install: 
-        - pip install mkdocs
-        - pip install mkdocs-material
-        - pip install pymdown-extensions
-        - pip install markdown==2.6.11
       script: 
-        - mkdocs --version
-        - mkdocs build --clean
+        - pydoc -w ./mkdocs
 
 
     - stage: "Tests"  
- #     name: "Test py35-integration"
       name: "Test py35"
       python: '3.5'
       env: TOXENV=py35
@@ -32,20 +25,7 @@ jobs:
         - pip install codecov
         - pip install tox
       script: tox
-#    - name: "Test py35-min-req"
-#      python: '3.5'
-#      env: TOXENV=py35-min-req
-#      install:
-#        - pip install codecov
-#        - pip install tox
-#      script: tox
-#    - name: "Test py35-unittests"
-#      python: '3.5'
-#      env: TOXENV=py35-unittests
-#      install:
-#        - pip install codecov
-#        - pip install tox
-#      script: tox 
+
     - name: "Test py36"
       python: "3.6"
       env: TOXENV=py36
