@@ -30,7 +30,7 @@ jobs:
       install:
         - pip install codecov
         - pip install tox
-      script: tox -e py36test
+      script: tox
     
     
 #    - stage: deploy
