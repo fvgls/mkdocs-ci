@@ -39,7 +39,7 @@ jobs:
     
     
     - stage: deploy
-      script: ls /home/travis/build/fvgls/mkdocs
+      script: ls /home/travis/build/fvgls/mkdocs/docs/mkdocs
       deploy:
         provider: pages
         local-dir: ./docs/
