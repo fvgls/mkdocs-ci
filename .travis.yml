@@ -9,13 +9,14 @@ jobs:
     - stage: build
       name: "Build + docs"
       python: '3.6'
-#      env: TOXENV=docs
       install: pip install tox
-#      script: tox -e docs
       script: tox --notest --sdistonly
-#    - name: "Generating documentation"
-#      install: pip install mkdocs
-#     script: mkdocs build --clean
+    - name: "Generating documentation"
+      python: '3.6'
+      install: pip install mkdocs
+      script: 
+        - mkdocs --version
+        - mkdocs build --clean
 
 
     - stage: "Tests"  
