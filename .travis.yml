@@ -7,7 +7,7 @@ install:
 jobs:
   include:
     - stage: build
-      name: "Build"
+      name: "Build + docs"
       env: TOXENV=docs
       install: pip install tox
       script: tox --notest --sdistonly
