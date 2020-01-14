@@ -30,14 +30,26 @@ nav:
 extra_css:
     - css/extra.css
 
+ 
 markdown_extensions:
-    - toc:
-        permalink: 
-    - admonition
-    - def_list
-    - mdx_gh_links:
-        user: fvgls
-        repo: mkdocs
+  - pymdownx.smartsymbols
+  - lightgallery
+  - pymdownx.mark
+  - markdown.extensions.attr_list
+  - pymdownx.superfences
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - codehilite:
+      linenums: true
+  - meta
+  - footnotes
+  - admonition
+  - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
 
 copyright: Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
 
