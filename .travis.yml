@@ -13,9 +13,9 @@ jobs:
       script: tox --notest --sdistonly
     - name: "Generating documentation"
       python: '3.6'
-      install: pip install pdoc
+      install: pip install pycco
       script: 
-        - pdoc --html ./doc
+        - pycco ./mkdocs -p
 
 
     - stage: "Tests"  
