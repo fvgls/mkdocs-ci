@@ -19,18 +19,18 @@ jobs:
     - stage: "Tests"  
       name: "Test py35"
       python: "3.5"
-      env: TOXENV=py35tests
+      env: TOXENV=py35
       install:
         - pip install codecov
         - pip install tox
-      script: tox --result-json
+      script: tox 
     - name: "Test py36"
       python: "3.6"
-      env: TOXENV=py36tests
+      env: TOXENV=py36
       install:
         - pip install codecov
         - pip install tox
-      script: tox --result-json
+      script: tox
     
     
 #    - stage: deploy
