@@ -18,7 +18,7 @@ jobs:
 
     - stage: "Tests"  
  #     name: "Test py35-integration"
-      name "Test py35"
+      name: "Test py35"
       python: '3.5'
       env: TOXENV=py35
       install:
