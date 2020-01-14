@@ -13,8 +13,9 @@ jobs:
       script: tox --notest --sdistonly
     - name: "Generating documentation"
       python: '3.6'
+      install: pip install pdoc
       script: 
-        - pydoc -w ./mkdocs
+        - pdoc --html -output-dir doc ./mkdocs
 
 
     - stage: "Tests"  
