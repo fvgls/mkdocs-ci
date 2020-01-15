@@ -16,7 +16,7 @@ jobs:
       install: pip install pycco
       script: 
         - pycco mkdocs/**/*.py -p
-        - pwd
+        - ls
         - ls docs/mkdocs
 
 
