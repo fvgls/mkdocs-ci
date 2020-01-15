@@ -13,13 +13,10 @@ jobs:
       script: tox --notest --sdistonly
     - name: "Generating documentation"
       python: '3.6'
-      install: pip install pycco
+      env: TOXENV=docs
+      install: pip install tox
       script: 
-        - pycco mkdocs/**/*.py -p
-        - ls
-        - ls docs/mkdocs
-      after_success:
-        - .travis/push.sh
+        - tox
 
 
     - stage: "Tests"  
