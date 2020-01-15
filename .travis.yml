@@ -12,7 +12,7 @@ jobs:
       install: pip install tox
       script: tox --notest --sdistonly
     - name: "Generating documentation"
-      python: '3.6'
+      python: '3.7'
       env: TOXENV=docs
       install: pip install tox
       script: 
