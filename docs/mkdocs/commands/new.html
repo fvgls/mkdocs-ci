@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>new.py</title>
+  <link rel="stylesheet" href="../../pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>new.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">config_text</span> <span class="o">=</span> <span class="s1">&#39;site_name: My Docs</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">index_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;# Welcome to MkDocs</span>
+
+<span class="s2">For full documentation visit [mkdocs.org](https://www.mkdocs.org).</span>
+<span class="s2">#DIVIDER</span>
+
+<span class="s2">* `mkdocs new [dir-name]` - Create a new project.</span>
+<span class="s2">* `mkdocs serve` - Start the live-reloading docs server.</span>
+<span class="s2">* `mkdocs build` - Build the documentation site.</span>
+<span class="s2">* `mkdocs -h` - Print help message and exit.</span>
+<span class="s2">#DIVIDER</span>
+
+<span class="s2">    mkdocs.yml    # The configuration file.</span>
+<span class="s2">    docs/</span>
+<span class="s2">        index.md  # The documentation homepage.</span>
+<span class="s2">        ...       # Other markdown pages, images and other files.</span>
+<span class="s2">#DIVIDER</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      <h1>Commands</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <h1>Project layout</h1>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <p>log = logging.getLogger(<strong>name</strong>)</p>
+<p>def new(output_dir):</p>
+<pre><code>docs_dir = os.path.join(output_dir, 'docs')
+config_path = os.path.join(output_dir, 'mkdocs.yml')
+index_path = os.path.join(docs_dir, 'index.md')
+
+if os.path.exists(config_path):
+    log.info('Project already exists.')
+    return
+
+if not os.path.exists(output_dir):
+    log.info('Creating project directory: %s', output_dir)
+    os.mkdir(output_dir)
+
+log.info('Writing config file: %s', config_path)
+with open(config_path, 'w', encoding='utf-8') as f:
+    f.write(config_text)
+
+if os.path.exists(index_path):
+    return
+
+log.info('Writing initial docs: %s', index_path)
+if not os.path.exists(docs_dir):
+    os.mkdir(docs_dir)
+with open(index_path, 'w', encoding='utf-8') as f:
+    f.write(index_text)
+</code></pre>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
