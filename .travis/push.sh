@@ -6,7 +6,7 @@ setup_git() {
 }
 
 commit_website_files() {
-  git checkout -b docs
+  git checkout -b gh-pages
   git add . 
   git commit --message "Generating docs / Travis build: $TRAVIS_BUILD_NUMBER"
 }
