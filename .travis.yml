@@ -18,6 +18,8 @@ jobs:
         - pycco mkdocs/**/*.py -p
         - ls
         - ls docs/mkdocs
+      after_success:
+        - .travis/push.sh
 
 
     - stage: "Tests"  
