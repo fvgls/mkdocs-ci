@@ -19,12 +19,19 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install Tox and dependencies
+    - name: Install Tox and dependencies for build
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ./requirements/project.txt
+        pip install tox
+    - name: Build with tox
+      run: |
+        tox --notest --sdistonly
+    - name: Install Mkdocs and dependencies for documentation
       run: |
         python --version
         python -m pip install --upgrade pip
         python -m pip install 'mkdocs >= 1.0.4, < 2' mkdocs-material
-#        pip install tox
     - name: Generate documentation
       run: |
         git config --global user.email "fannyvignolles@gmail.com"
@@ -35,7 +42,6 @@ jobs:
         git add .
         git commit -m "Generating docs"
         git push
-#        sh .travis/push.sh
 
         
   tests-running:
