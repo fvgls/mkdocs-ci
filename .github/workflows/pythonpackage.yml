@@ -32,15 +32,19 @@ jobs:
         python -m pip install 'mkdocs >= 1.0.4, < 2' mkdocs-material
     - name: Generate documentation
       run: |
-        git config --global user.email "fannyvignolles@gmail.com"
-        git config --global user.name "fvgls"
-        git status
-        git checkout -b docs
-        git pull origin docs
         mkdocs build --clean
-        git add .
-        git commit -m "Generating docs"
-        git push origin docs
+#        git config --global user.email "fannyvignolles@gmail.com"
+#        git config --global user.name "fvgls"
+#        git status
+#        git checkout -b docs
+#        git pull origin docs
+#        git add .
+#        git commit -m "Generating docs"
+#        git push origin docs
+    - uses: actions/upload-artifact@v1
+      with:
+        name: documentation
+        path: site
     - name: Install Tox and dependencies for build
       run: |
         python -m pip install --upgrade pip
@@ -74,3 +78,16 @@ jobs:
         pip install codecov
         pip install tox
         tox -e test
+        
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/download-artifact@v1
+      with:
+        name: documentation
+    - name: Verify dowloading artifact
+      run: ls site
+    - name: Deploy
+      run: echo "pouet"
+        
