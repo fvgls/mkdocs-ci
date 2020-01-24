@@ -41,7 +41,7 @@ jobs:
 #        git commit -m "Generating docs"
 #        git push origin docs
     - uses: actions/upload-artifact@v1
-      id: success()
+      if: success()
       with:
         name: documentation
         path: site
