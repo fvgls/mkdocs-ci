@@ -28,6 +28,7 @@ jobs:
         mkdocs build --clean
         pwd
         ls
+        sh .travis/push.sh
 #        tox -e docs
         
   tests-running:
