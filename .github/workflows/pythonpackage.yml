@@ -33,8 +33,8 @@ jobs:
 #        pip install pytest
 #        pip install -r ./requirements/test.txt
 #        python -m mkdocs.tests.integration
-    - name: Test in py35
+    - name: Test with tox
       run: |
         pip install codecov
         pip install tox
-        tox -e py35
+        tox 
