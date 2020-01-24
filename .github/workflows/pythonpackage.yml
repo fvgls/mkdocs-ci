@@ -1,6 +1,12 @@
 name: Python package
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: 
+      - master
 
 jobs:
   build_documentation:
@@ -37,11 +43,11 @@ jobs:
         git config --global user.email "fannyvignolles@gmail.com"
         git config --global user.name "fvgls"
         git status
-        git checkout master
+        git checkout docs
         mkdocs build --clean
         git add .
         git commit -m "Generating docs"
-        git push
+        git push origin docs
 
         
   tests-running:
