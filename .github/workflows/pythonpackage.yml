@@ -32,14 +32,6 @@ jobs:
     - name: Generate documentation
       run: |
         mkdocs build --clean
-#        git config --global user.email "fannyvignolles@gmail.com"
-#        git config --global user.name "fvgls"
-#        git status
-#        git checkout -b docs
-#        git pull origin docs
-#        git add .
-#        git commit -m "Generating docs"
-#        git push origin docs
     - uses: actions/upload-artifact@v1
       if: success()
       with:
