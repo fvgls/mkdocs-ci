@@ -20,6 +20,7 @@ jobs:
     - name: Install Tox
       run: |
         python --version
+        python -m pip install --upgrade pip
         pip install tox
     - name: Generate documentation
       run: |
