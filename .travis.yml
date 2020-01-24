@@ -41,7 +41,7 @@ jobs:
       script: ls /home/travis/build/fvgls/mkdocs/docs/mkdocs
       deploy:
         provider: pages
-        local-dir: ./docs/mkdocs/
+        local-dir: ./docs/
         skip_cleanup: true
         github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
         keep_history: true
