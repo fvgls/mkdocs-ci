@@ -27,6 +27,8 @@ jobs:
 #        pip install tox
     - name: Generate documentation
       run: |
+        git config --global user.email "fannyvignolles@gmail.com"
+        git config --global user.name "fvgls"
         git status
         git checkout master
         mkdocs build --clean
