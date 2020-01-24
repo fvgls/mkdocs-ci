@@ -82,9 +82,8 @@ jobs:
         name: documentation
     - name: Verify dowloading artifact
       run: |
-        pwd
-        ls
         ls documentation
+        cat documentation/CNAME
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
