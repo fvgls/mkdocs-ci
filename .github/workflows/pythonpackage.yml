@@ -87,7 +87,10 @@ jobs:
       with:
         name: documentation
     - name: Verify dowloading artifact
-      run: ls site
+      run: |
+        pwd
+        ls
+#        ls site
     - name: Deploy
       run: echo "pouet"
         
