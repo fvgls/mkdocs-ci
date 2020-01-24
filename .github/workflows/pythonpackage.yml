@@ -22,10 +22,13 @@ jobs:
         python --version
         python -m pip install --upgrade pip
         python -m pip install 'mkdocs >= 1.0.4, < 2' mkdocs-material
-        pip install tox
+#        pip install tox
     - name: Generate documentation
       run: |
-        tox -e docs
+        mkdocs build --clean
+        pwd
+        ls sites
+#        tox -e docs
         
   tests-running:
 
