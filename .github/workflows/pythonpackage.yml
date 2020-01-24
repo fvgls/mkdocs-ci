@@ -27,7 +27,7 @@ jobs:
       run: |
         mkdocs build --clean
         pwd
-        ls sites
+        ls
 #        tox -e docs
         
   tests-running:
