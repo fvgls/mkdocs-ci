@@ -28,10 +28,10 @@ jobs:
         git status
         git checkout master
         mkdocs build --clean
+        sh .travis/push.sh
 #        git add .
 #        git commit -m "Generating docs"
-        sh .travis/push.sh
-#        tox -e docs
+
         
   tests-running:
 
