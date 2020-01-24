@@ -25,12 +25,11 @@ jobs:
 #        pip install tox
     - name: Generate documentation
       run: |
+        git status
+        git checkout master
         mkdocs build --clean
         pwd
         ls
-        git stash
-        git checkout master
-        git stash pop 
         git status
 #        sh .travis/push.sh
 #        tox -e docs
