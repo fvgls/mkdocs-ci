@@ -28,9 +28,10 @@ jobs:
         git status
         git checkout master
         mkdocs build --clean
-        pwd
-        ls
-        git status
+        git add .
+        git commit -m "Generating docs"
+        git remote add origin-pages https://${MKDOCS_CI}@github.com/fvgls/mkdocs-ci.git > /dev/null 2>&1
+        git push --quiet --set-upstream origin-pages master
 #        sh .travis/push.sh
 #        tox -e docs
         
