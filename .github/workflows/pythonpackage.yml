@@ -83,6 +83,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v1
     - uses: actions/download-artifact@v1
       with:
         name: documentation
@@ -90,7 +92,11 @@ jobs:
       run: |
         pwd
         ls
-#        ls site
+        ls documentation
     - name: Deploy
-      run: echo "pouet"
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.MKDOCS_CI }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: documentation # The folder the action should deploy.
         
