@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      with:
+        token: ${{ secrets.MKDOCS_CI }}
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
@@ -28,9 +30,10 @@ jobs:
         git status
         git checkout master
         mkdocs build --clean
-        sh .travis/push.sh
-#        git add .
-#        git commit -m "Generating docs"
+        git add .
+        git commit -m "Generating docs"
+        git push
+#        sh .travis/push.sh
 
         
   tests-running:
