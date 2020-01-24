@@ -10,7 +10,6 @@ on:
 
 jobs:
   build_documentation:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
@@ -42,6 +41,7 @@ jobs:
 #        git commit -m "Generating docs"
 #        git push origin docs
     - uses: actions/upload-artifact@v1
+      id: success()
       with:
         name: documentation
         path: site
@@ -56,7 +56,6 @@ jobs:
 
         
   tests-running:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 2
@@ -80,6 +79,7 @@ jobs:
         tox -e test
         
   deploy:
+    needs: [build_documentation]
     runs-on: ubuntu-latest
 
     steps:
