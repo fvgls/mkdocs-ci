@@ -35,7 +35,7 @@ jobs:
         git config --global user.email "fannyvignolles@gmail.com"
         git config --global user.name "fvgls"
         git status
-        git checkout docs
+        git checkout -b docs
         mkdocs build --clean
         git add .
         git commit -m "Generating docs"
