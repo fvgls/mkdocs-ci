@@ -4,7 +4,7 @@ School project of continuous integration.
 
 ---
 
-![CI pipeline](https://github.com/fvgls/mkdocs-ci/.github/workflows/CI%20Pipeline/badge.svg)
+![CI pipeline](https://github.com/fvgls/mkdocs-ci/workflows/CI%20Pipeline/badge.svg)
 
 
 This project aim to put in place an continuous integration system on the [mkdocs](https://github.com/mkdocs/mkdocs) project which information can be find on the following platforms:
