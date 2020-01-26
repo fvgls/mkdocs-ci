@@ -2,13 +2,11 @@ name: Python package
 
 on: 
   push:
-    branches:
-      - master
-    paths-ignore:
-      - 'docs/**'
+    branches-ignore:
+      - gh-pages
   pull_request:
-    branches: 
-      - master
+    branches-ignore:
+      - gh-pages
 
 jobs:
   build_documentation:
