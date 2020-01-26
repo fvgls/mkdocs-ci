@@ -7,7 +7,7 @@ School project of continuous integration.
 ![CI pipeline](https://github.com/fvgls/mkdocs-ci/workflows/CI%20Pipeline/badge.svg)
 
 
-This project aim to put in place an continuous integration system on the [mkdocs](https://github.com/mkdocs/mkdocs) project which information can be find on the following platforms:
+This project aims to put in place an continuous integration system on the [mkdocs](https://github.com/mkdocs/mkdocs) project which information can be found on the following platforms:
 - [GitHub Repository](https://github.com/mkdocs/mkdocs).
 - View the [MkDocs documentation][mkdocs].
 - Project [release notes][release-notes].
@@ -33,7 +33,7 @@ The pipeline is built with the GitHub Action Integration system via a [configura
 1. Deploying job: `deploy` deploys the documentation on GitHub Pages
     * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
     * Dowloading the documentation stored as artifacts thanks to the GithHub Action `download-artifact@v1`
-    * Deploying on GitHub Pages thanks to the [JamesIves action][https://github.com/JamesIves/github-pages-deploy-action] `github-pages-deploy-action@releases/v3`
+    * Deploying on GitHub Pages thanks to the [JamesIves action](https://github.com/JamesIves/github-pages-deploy-action) `github-pages-deploy-action@releases/v3`
 
 
 
