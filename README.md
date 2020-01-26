@@ -10,7 +10,8 @@ School project of continuous integration.
 [![Coverage Status][codecov-image]][codecov-link]
 [![Landscale Code Health][landscape-image]][landscape-link]
 
-![](https://github.com/fvgls/mkdocs-ci/.github/workflows/pythonpackage.yml/badge.svg)
+[![Build Status][https://github.com/fvgls/mkdocs-ci/.github/workflows/pythonpackage.yml/badge.svg
+]][https://github.com/fvgls/mkdocs-ci/.github/workflows/pythonpackage.yml]
 
 This project aim to put in place an continuous integration system on the [mkdocs][https://github.com/mkdocs/mkdocs] project which information can be find on the following platforms:
 - [GitHub Repository][https://github.com/mkdocs/mkdocs].
