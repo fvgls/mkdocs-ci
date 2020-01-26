@@ -69,4 +69,4 @@ ENV/
 site/
 
 # Mac artifacts
-$.DS_Store
+*.DS_Store
