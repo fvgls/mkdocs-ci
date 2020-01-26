@@ -4,14 +4,6 @@ School project of continuous integration.
 
 ---
 
-[![PyPI Version][pypi-v-image]][pypi-v-link]
-[![Build Status][travis-image]][travis-link]
-[![Windows Build Status][appveyor-image]][appveyor-link]
-[![Coverage Status][codecov-image]][codecov-link]
-[![Landscale Code Health][landscape-image]][landscape-link]
-
-[![Python package](https://github.com/fvgls/mkdocs-ci/workflows/Python%20package/badge.svg)][https://github.com/fvgls/mkdocs-ci/.github/workflows/pythonpackage.yml]
-
 This project aim to put in place an continuous integration system on the [mkdocs][https://github.com/mkdocs/mkdocs] project which information can be find on the following platforms:
 - [GitHub Repository][https://github.com/mkdocs/mkdocs].
 - View the [MkDocs documentation][mkdocs].
