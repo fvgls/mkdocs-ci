@@ -1,6 +1,6 @@
-# MkDocs
+# ENSG TP: Continuous Integration Courses
 
-Project documentation with Markdown.
+School project of continuous integration.
 
 ---
 
@@ -10,6 +10,10 @@ Project documentation with Markdown.
 [![Coverage Status][codecov-image]][codecov-link]
 [![Landscale Code Health][landscape-image]][landscape-link]
 
+![](https://github.com/fvgls/mkdocs-ci/.github/workflows/pythonpackage.yml/badge.svg)
+
+This project aim to put in place an continuous integration system on the [mkdocs][https://github.com/mkdocs/mkdocs] project which information can be find on the following platforms:
+- [GitHub Repository][https://github.com/mkdocs/mkdocs].
 - View the [MkDocs documentation][mkdocs].
 - Project [release notes][release-notes].
 - Visit the [MkDocs wiki](https://github.com/mkdocs/mkdocs/wiki) for community
@@ -17,10 +21,26 @@ Project documentation with Markdown.
 - IRC channel: `#mkdocs` on freenode.
 - Discussions and support: <https://groups.google.com/forum/#!forum/mkdocs>
 
-## Code of Conduct
+## Description of the CI pipeline
 
-Everyone interacting in the MkDocs project's codebases, issue trackers, chat
-rooms, and mailing lists is expected to follow the [PyPA Code of Conduct].
+The pipeline is built with the GitHub Action Integration system via a [configuration file][./.github/workflows/pythonpackage.yml]. It is composed of three jobs:
+1. Building job: `build_documentation` generate the documentation and package the project
+    * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
+    * Installing the dependencies needed to create the documentation
+    * Generating the documentation 
+    * Uploading the documentation as an artifact thanks to the GitHub Action `upload-artifact@v1`
+    * Installing Tox and the dependencies needed to package the project
+    * Packaging the project with Tox
+1. Testing job: `tests` runs tests in both Python 3.5 and 3.5 environments
+    * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
+    * Installing dependencies needed for running the project
+    * Testing with tox 
+1. Deploying job: `deploy` deploys the documentation on GitHub Pages
+    * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
+    * Dowloading the documentation stored as artifacts thanks to the GithHub Action `download-artifact@v1`
+    * Deploying on GitHub Pages thanks to the [JamesIves action][https://github.com/JamesIves/github-pages-deploy-action] `github-pages-deploy-action@releases/v3`
+
+
 
 [appveyor-image]: https://img.shields.io/appveyor/ci/d0ugal/mkdocs/master.svg
 [appveyor-link]: https://ci.appveyor.com/project/d0ugal/mkdocs
