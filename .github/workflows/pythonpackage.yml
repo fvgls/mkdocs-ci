@@ -25,13 +25,12 @@ jobs:
       run: |
         python --version
         python -m pip install --upgrade pip
-        pip install -U sphinx
-#        python -m pip install 'mkdocs >= 1.0.4, < 2' mkdocs-material
+        python -m pip install 'mkdocs >= 1.0.4, < 2' mkdocs-material
     - name: Generate documentation
       run: |
-        sphinx-build -b html ./mkdocs ./docs
-#        mkdocs build --clean
-    - name: Saving docs as artifact
+        mkdocs build --clean
+        ls
+    - name: Saving site as artifact
       uses: actions/upload-artifact@v1
       if: success()
       with:
