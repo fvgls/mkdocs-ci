@@ -33,7 +33,7 @@ valign=top
 
 valign=top
 
-bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>390</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>*test_running*
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>390</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>*tests*
 
 
 valign=top
