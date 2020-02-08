@@ -18,7 +18,7 @@ This project aims to put in place an continuous integration system on the [mkdoc
 
 ## Description of the CI pipeline
 
-The pipeline is built with the GitHub Action Integration system via a [configuration file][./.github/workflows/pythonpackage.yml]. It is composed of three jobs:
+The pipeline is built with the GitHub Action Integration system through a [configuration file](./.github/workflows/pythonpackage.yml). It is composed of three jobs:
 
 ![Pipeline Diagram](./pipeline_diagrams/pipeline_diagram.png)
 
