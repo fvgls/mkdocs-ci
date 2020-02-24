@@ -20,8 +20,6 @@ This project aims to put in place an continuous integration system on the [mkdoc
 
 The pipeline is built with the GitHub Action Integration system through a [configuration file](./.github/workflows/pythonpackage.yml). It is composed of three jobs:
 
-![Pipeline Diagram](./pipeline_diagrams/pipeline_diagram.png)
-
 1. Building job: `build_documentation` generate the documentation and package the project
     * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
     * Installing the dependencies needed to create the documentation
@@ -37,6 +35,10 @@ The pipeline is built with the GitHub Action Integration system through a [confi
     * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
     * Dowloading the documentation stored as artifacts thanks to the GithHub Action `download-artifact@v1`
     * Deploying on GitHub Pages thanks to the [JamesIves action](https://github.com/JamesIves/github-pages-deploy-action) `github-pages-deploy-action@releases/v3`
+
+
+![Pipeline Diagram](./pipeline_diagrams/pipeline_diagram.png)
+
 
 ### Precisions:
 * The deploying job needs the building job to be successful to be started. So, if the building job fails, the deploying job is canceled but not the testing job.
