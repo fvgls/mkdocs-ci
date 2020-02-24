@@ -41,8 +41,11 @@ The pipeline is built with the GitHub Action Integration system through a [confi
 
 
 ### Precisions:
-* The deploying job needs the building job to be successful to be started. So, if the building job fails, the deploying job is canceled but not the testing job.
+* There are two parallel branches on the pipeline:
+    * one for the building and the deploying jobs,
+    * one for the testing job.
 * The testing job has two parallel steps: if one of them fails, the other is cancelled.
+* The deploying job needs a successful building job to start. So, if the building job fails, the deploying job is canceled but not the testing job.
 * The status of the testing job has no impact on the deploying job:
     * because the deployement only consists on deploying the documentation.
     * that implies that the deploying job and the testing job can be runned simultaneously (as the deploying job starts when the building job is done).
