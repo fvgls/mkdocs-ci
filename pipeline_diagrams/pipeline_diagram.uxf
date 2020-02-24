@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>0</x><y>100</y><w>20</w><h>20</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>100</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;110;50;110;50;10;10;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>80</x><y>160</y><w>200</w><h>150</h></coordinates><panel_attributes>- Checkout git
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>0</x><y>138</y><w>20</w><h>20</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>120</x><y>198</y><w>200</w><h>150</h></coordinates><panel_attributes>- Checkout git
 - Set up Python
 - Install Mkocs dependencies
 - Generate Documentation with
@@ -12,18 +12,18 @@
 valign=top
 halign=left
 
-bg=#4c9900</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>80</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>*build_documentation*
+bg=#4c9900</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>120</x><y>138</y><w>200</w><h>30</h></coordinates><panel_attributes>*build_documentation*
 
 
 valign=top
-bg=#336600</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>400</x><y>430</y><w>180</w><h>40</h></coordinates><panel_attributes>*Artifact*
+bg=#336600</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>290</x><y>358</y><w>180</w><h>40</h></coordinates><panel_attributes>*Artifact*
 *Documentation*
 
 lt=.
 bg=#3399F
 valign=top
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>100</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;30;10;30;110;10;110</additional_attributes></element><element><id>UMLState</id><coordinates><x>390</x><y>160</y><w>200</w><h>90</h></coordinates><panel_attributes>Python 3.5
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>230</x><y>508</y><w>200</w><h>90</h></coordinates><panel_attributes>Python 3.5
 -.
 - Checkout git
 - Set up Python
@@ -33,11 +33,11 @@ valign=top
 
 valign=top
 
-bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>390</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>*tests*
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>230</x><y>448</y><w>200</w><h>30</h></coordinates><panel_attributes>*tests*
 
 
 valign=top
-bg=#990000</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>100</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;30;10;30;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>100</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;110;70;110;70;10;10;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>390</x><y>300</y><w>200</w><h>90</h></coordinates><panel_attributes>Python 3.6
+bg=#990000</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>448</y><w>280</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>260;10;60;10;60;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>448</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>160;110;100;110;100;10;10;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>230</x><y>648</y><w>200</w><h>90</h></coordinates><panel_attributes>Python 3.6
 -.
 - Checkout git
 - Set up Python
@@ -47,7 +47,7 @@ bg=#990000</panel_attributes><additional_attributes></additional_attributes></el
 
 valign=top
 
-bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>200</y><w>50</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>30;150;10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>200</y><w>50</w><h>170</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;150;30;150;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>100</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;30;10;30;110;10;110</additional_attributes></element><element><id>UMLState</id><coordinates><x>700</x><y>160</y><w>200</w><h>80</h></coordinates><panel_attributes>- Checkout git
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>548</y><w>90</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;150;10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>548</y><w>80</w><h>170</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;150;60;150;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>138</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;40;10;40;110;10;110</additional_attributes></element><element><id>UMLState</id><coordinates><x>420</x><y>198</y><w>200</w><h>80</h></coordinates><panel_attributes>- Checkout git
 - Download Artifact 
    Documentation
 - Deploy on GitHubPages
@@ -55,8 +55,8 @@ bg=red</panel_attributes><additional_attributes></additional_attributes></elemen
 valign=top
 halign=left
 
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>700</x><y>100</y><w>200</w><h>30</h></coordinates><panel_attributes>*deploy*
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>420</x><y>138</y><w>200</w><h>30</h></coordinates><panel_attributes>*deploy*
 
 
 valign=top
-bg=#cc6600</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>10</x><y>100</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;110;50;110;50;10;10;10</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>950</x><y>100</y><w>20</w><h>20</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>300</y><w>250</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;150;10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>568</x><y>230</y><w>250</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;10;230;220;10;220</additional_attributes></element></diagram>
+bg=#cc6600</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>138</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>680</x><y>138</y><w>20</w><h>20</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>338</y><w>100</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>458</x><y>268</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;60;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>138</y><w>70</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>50;110;30;110;30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>138</y><w>70</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>50;110;30;110;30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>138</y><w>70</w><h>340</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>50;320;10;320;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>138</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;40;10;40;110;10;110</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>680</x><y>448</y><w>20</w><h>20</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element></diagram>
