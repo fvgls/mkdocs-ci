@@ -29,7 +29,7 @@ The pipeline is built with the GitHub Action Integration system through a [confi
     * Uploading the documentation as an artifact thanks to the GitHub Action `upload-artifact@v1`
     * Installing Tox and the dependencies needed to package the project
     * Packaging the project with Tox
-1. Testing job: `tests` runs tests in both Python 3.5 and 3.5 environments
+1. Testing job: `tests` runs tests in both Python 3.5 and 3.5 environments parallely
     * Pulling the project in the VM of the job thanks to the GitHub Action `checkout@v1`
     * Installing dependencies needed for running the project
     * Testing with tox 
@@ -38,6 +38,12 @@ The pipeline is built with the GitHub Action Integration system through a [confi
     * Dowloading the documentation stored as artifacts thanks to the GithHub Action `download-artifact@v1`
     * Deploying on GitHub Pages thanks to the [JamesIves action](https://github.com/JamesIves/github-pages-deploy-action) `github-pages-deploy-action@releases/v3`
 
+### Precisions:
+* The deploying job needs the building job to be successful to be started. So, if the building job fails, the deploying job is canceled but not the testing job.
+* The testing job has two parallel steps: if one of them fails, the other is cancelled.
+* The status of the testing job has no impact on the deploying job:
+    * because the deployement only consists on deploying the documentation.
+    * that implies that the deploying job and the testing job can be runned simultaneously (as the deploying job starts when the building job is done).
 
 
 [appveyor-image]: https://img.shields.io/appveyor/ci/d0ugal/mkdocs/master.svg
