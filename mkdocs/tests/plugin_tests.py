@@ -68,6 +68,7 @@ class TestPluginClass(unittest.TestCase):
         self.assertEqual(len(errors), 1)
         self.assertIn('foo', errors[0])
         self.assertEqual(warnings, [])
+        self.assertEqual("foo","bar")
 
         errors, warnings = plugin.load_config({'bar': 'a string'})
         self.assertEqual(len(errors), 1)
