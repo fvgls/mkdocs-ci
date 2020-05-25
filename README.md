@@ -1,4 +1,4 @@
-# ENSG TP: Continuous Integration Courses
+# ENSG TP: Continuous Integration Course
 
 School project of continuous integration.
 
